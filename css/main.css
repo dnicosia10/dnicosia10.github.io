@@ -1293,95 +1293,141 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #intro {
-	background: var(--bg-dark) url(../images/intro-bg.jpg) no-repeat center center;
-	background-size: cover;
-	background-attachment: fixed;
-	width: 100%;
-	height: 100%;
-	min-height: 720px;
-	display: table;
-	position: relative;
-	text-align: center;
+    background: url(../images/image_mulesoft_cover.jpg) no-repeat left top;
+    background-size: 150%;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    min-height: 720px;
+    display: table;
+    position: relative;
+    text-align: center;
 }
+
 #intro .intro-overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: linear-gradient(to right, rgba(28, 35, 49, 0.95) 0%, rgba(28, 35, 49, 0.85) 100%);
-	opacity: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9));
+    opacity: 1;
 }
+
 #intro .intro-content {
-	display: table-cell;
-	vertical-align: middle;
-	text-align: center;
-	color: #FFFFFF;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #FFFFFF;
+    position: relative;
+    z-index: 2;
 }
+
 #intro .intro-content img {
-	width: 150px;
-	height: 150px;
-	border-radius: 50%;
-	margin-bottom: 2rem;
-	border: 3px solid #0066cc;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 2rem;
+    border: 3px solid #00a1df;
+    box-shadow: 0 0 20px rgba(0, 161, 223, 0.3);
 }
+
 #intro h1 {
-	color: var(--text-light);
-	font-family: "poppins-medium", sans-serif;
-	font-size: 6.4rem;
-	font-weight: 600;
-	text-shadow: none;
-	margin-bottom: 1.2rem;
+    color: #ffffff;
+    font-family: "poppins-medium", sans-serif;
+    font-size: 6.4rem;
+    font-weight: 600;
+    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    margin-bottom: 1.2rem;
+    animation: fadeInDown 1s ease;
 }
+
 #intro p.intro-position {
-	font-family: "lora-regular", serif;
-	font-size: 1.8rem;
-	font-weight: 500;
-	text-transform: none;
-	letter-spacing: 0.1rem;
-	color: var(--text-light);
-	margin-bottom: 2.4rem;
+    font-family: "poppins-regular", sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    text-transform: none;
+    letter-spacing: 0.1rem;
+    color: #00a1df;
+    margin-bottom: 2.4rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
 #intro p.intro-position span {
-	display: inline-block;
-	padding: 0 8px;
-	border-right: 1px solid rgba(255, 255, 255, 0.3);
+    display: inline-block;
+    padding: 0 8px;
+    border-right: 1px solid rgba(0, 161, 223, 0.3);
 }
-#intro p.intro-position span:last-child {
-	border-right: none;
-}
-#intro p.intro-position span::before, #intro p.intro-position span::after {
-	display: none !important;
-}
+
 #intro p.intro-desc {
-	color: var(--text-light);
-	font-size: 2rem;
-	margin-bottom: 3rem;
+    color: #ffffff;
+    font-size: 2rem;
+    margin-bottom: 3rem;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
+
 #intro .button {
-	color: #FFFFFF !important;
-	border-color: rgba(255, 255, 255, 0.3);
-	height: 6rem !important;
-	line-height: 5.4rem !important;
-	padding: 0 3.5rem 0 3rem !important;
-	margin-top: .6rem;
-	font-size: 1.3rem;
-	text-transform: uppercase;
-	letter-spacing: .25rem;
+    color: #ffffff !important;
+    border: 2px solid #00a1df;
+    height: 6rem !important;
+    line-height: 5.4rem !important;
+    padding: 0 3.5rem 0 3rem !important;
+    margin-top: .6rem;
+    font-size: 1.3rem;
+    text-transform: uppercase;
+    letter-spacing: .25rem;
+    background: rgba(0, 161, 223, 0.1);
+    transition: all 0.3s ease;
 }
-#intro .button:hover,
-#intro .button:focus {
-	border-color: #0066cc;
+
+#intro .button:hover {
+    background: #00a1df;
+    color: #ffffff !important;
+    border-color: #00a1df;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 161, 223, 0.3);
 }
-#intro .button::after {
-	display: inline-block;
-	content: "\f107";
-	font-family: fontawesome;
-	font-size: 1.6rem;
-	line-height: inherit;
-	text-align: center;
-	position: relative;
-	left: 1.2rem;
+
+.intro-social {
+    margin: 3rem 0 0 0;
+    padding: 0;
+    font-size: 2.4rem;
+    display: flex;
+    justify-content: center;
+    gap: 2.4rem;
+    list-style: none;
+}
+
+.intro-social li a {
+    color: #ffffff;
+    background: rgba(0, 161, 223, 0.2);
+    width: 4.8rem;
+    height: 4.8rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    border: 2px solid rgba(0, 161, 223, 0.4);
+}
+
+.intro-social li a:hover {
+    color: #ffffff;
+    background: #00a1df;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 161, 223, 0.4);
+    border-color: #00a1df;
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /**
@@ -1451,6 +1497,25 @@ header .logo a {
 	.intro-social {
 		font-size: 2.4rem;
 	}
+}
+
+/* Add media queries for responsive background sizing */
+@media only screen and (max-width: 1024px) {
+    #intro {
+        background-size: 200%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    #intro {
+        background-size: 250%;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    #intro {
+        background-size: 300%;
+    }
 }
 
 
